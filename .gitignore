@@ -64,3 +64,4 @@ typings/
 # office temp file
 .~*
 ~$*
+/L00 Tests/
