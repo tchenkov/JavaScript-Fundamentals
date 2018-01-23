@@ -53,16 +53,12 @@
                 for (let j = 0; j < calendarColumns; j++) {
                     let tag;
 
-                    switch (currentDate.getMonth()) {
-                        case selectedDate.getMonth() - 1:
-                            tag = ' class="prev-month"';
-                            break;
-                        case selectedDate.getMonth() + 1:
-                            tag = ' class="next-month"';
-                            break;
-                        default:
-                            tag = currentDate.getDate() !== selectedDate.getDate() ? '' : ' class="today"';
-
+                    if (currentDate.getTime() < firstDayOfTheMonthDate.getTime()){
+                        tag = ' class="prev-month"';
+                    } else if (currentDate.getTime() > lastDayOfTheMonth.getTime()){
+                        tag = ' class="next-month"';
+                    } else {
+                        tag = currentDate.getDate() !== selectedDate.getDate() ? '' : ' class="today"';
                     }
 
                     output += `<td${tag}>${currentDate.getDate()}</td>`;
@@ -73,8 +69,9 @@
                 output += '</tr>\n';
             }
 
-            output += '</table>';
-
+            output += '</table>\n';
+//            let currentDate2 = new Date(year, month - 1, 1 - firstDayOfTheMonthDate.getDay());
+//            output += currentDate2
             return output;
         }
     </script>
