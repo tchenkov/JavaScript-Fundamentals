@@ -4,19 +4,13 @@ function aggregateElements(inputData) {
         return a + b;
     }
 
-    let sumInverted = function (arr) {
-        let result = 0;
-        for (let value of arr) {
-            result += 1 / value;
-        }
-
-        return result;
-    };
+    // always reduce with initial value of 0 (zero)
+    let sumInverted = (a,b) => a + 1/b;
 
     let concat = (a, b) => '' + a + b;
 
     console.log(inputData.reduce(sum));
-    console.log(sumInverted(inputData));
+    console.log(inputData.reduce(sumInverted, 0));
     console.log(inputData.reduce(concat));
 }
 
