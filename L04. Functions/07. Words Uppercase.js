@@ -1,6 +1,9 @@
 function wordsUppercase(text) {
-    // todo
+    text = text.toUpperCase();
+    let words = text.split(/\W+/).filter(w => w !== '');
+    return words.join(", ");
 }
 
 // function tests
-wordsUppercase();
+console.log(wordsUppercase('Hi, how are you?'));
+console.log(wordsUppercase('hello'));
