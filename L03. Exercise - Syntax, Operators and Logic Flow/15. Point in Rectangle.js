@@ -1,4 +1,4 @@
-function isPintInRectangle(inputData) {
+function isPointInRectangle(inputData) {
     let x = inputData[0];
     let y = inputData[1];
     let xMin = inputData[2];
@@ -11,5 +11,5 @@ function isPintInRectangle(inputData) {
 }
 
 // function tests
-isPintInRectangle([8, -1, 2, 12, -3, 3]);
-isPintInRectangle([12.5, -1, 2, 12, -3, 3]);
+isPointInRectangle([8, -1, 2, 12, -3, 3]);
+isPointInRectangle([12.5, -1, 2, 12, -3, 3]);
