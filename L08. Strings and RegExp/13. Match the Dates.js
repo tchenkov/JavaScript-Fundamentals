@@ -1,5 +1,5 @@
 function matchTheDates(inputData) {
-    let pattern = /\b(\d{1,2})-([A-z][a-z]{2})-(\d{4})\b/g;
+    let pattern = /\b(\d{1,2})-([A-Z][a-z]{2})-(\d{4})\b/g;
     let result;
 
     for (let text of inputData) {
